@@ -1,0 +1,32 @@
+import 'package:flutter/material.dart';
+
+import 'page_view_item.dart';
+
+class CustomPageView extends StatelessWidget {
+  const CustomPageView({super.key, this.pageController});
+  final PageController? pageController;
+
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+      controller: pageController,
+      children: [
+        PageViewItem(
+          image: "assets/images/onboarding1.png",
+          title: "E shopping",
+          subTitle: "Explore top organic fruits & grab them",
+        ),
+        PageViewItem(
+          image: "assets/images/onboarding2.png",
+          title: "Delivery on the way",
+          subTitle: "Explore top organic fruits & grab them",
+        ),
+        PageViewItem(
+          image: "assets/images/onboarding3.png",
+          title: "Delivery Arrived",
+          subTitle: "Explore top organic fruits & grab them",
+        ),
+      ],
+    );
+  }
+}
